@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+
+# Dataset (do NOT commit)
+datasets/
+Dataset/
+data/images/
+data/labels/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tif
+*.tiff
+!figures/*.png
+!figures/*.jpg
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+yolo26*.pt
+
+# Training outputs
+runs/
+D:/YOLO26_Training_Runs/
+D:/Training_Results_2classes/
+D:/Ultralytics_Data/
+
+# Caches
+*.cache
+torch_cache/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

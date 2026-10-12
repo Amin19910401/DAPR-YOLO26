@@ -1,0 +1,10 @@
+torch>=2.5.0
+torchvision>=0.20.0
+ultralytics>=8.4.115
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+opencv-python>=4.8
+PyYAML>=6.0
+scipy>=1.11
+thop>=0.1.1
