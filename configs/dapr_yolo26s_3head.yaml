@@ -1,43 +1,66 @@
 # ============================================================
-# YOLO26s + DAPR (3-head: P2, P3, P4)
+# DAPR: Dynamic Adaptive Prototype-based Refinement
+# YOLO26s + DAPR, 3-head detection (P2, P3, P4)
+# ============================================================
+# DAPR is inserted at the P4/16 level in the FPN neck.
+# The detection head produces three outputs at P2/4, P3/8, P4/16.
+# The P5 detection head is removed.
 # ============================================================
 
 nc: 2
 end2end: True
 reg_max: 1
 scale: s
+
 scales:
+  n: [0.50, 0.25, 1024]
   s: [0.50, 0.50, 1024]
+  m: [0.50, 1.00, 512]
+  l: [1.00, 1.00, 512]
+  x: [1.00, 1.50, 512]
 
 backbone:
-  - [-1, 1, Conv, [64, 3, 2]]                    # 0-P1/2
-  - [-1, 1, Conv, [128, 3, 2]]                   # 1-P2/4
-  - [-1, 2, C3k2, [256, False, 0.25]]            # 2
-  - [-1, 1, Conv, [256, 3, 2]]                   # 3-P3/8
-  - [-1, 2, C3k2, [512, False, 0.25]]            # 4
-  - [-1, 1, Conv, [512, 3, 2]]                   # 5-P4/16
-  - [-1, 2, C3k2, [512, True]]                   # 6
-  - [-1, 1, Conv, [1024, 3, 2]]                  # 7-P5/32
-  - [-1, 2, C3k2, [1024, True]]                  # 8
-  - [-1, 1, SPPF, [1024, 5, 3, True]]            # 9
-  - [-1, 2, C2PSA, [1024]]                       # 10
+  - [-1, 1, Conv, [64, 3, 2]]                       # 0  P1/2
+  - [-1, 1, Conv, [128, 3, 2]]                      # 1  P2/4
+  - [-1, 2, C3k2, [256, False, 0.25]]               # 2
+  - [-1, 1, Conv, [256, 3, 2]]                      # 3  P3/8
+  - [-1, 2, C3k2, [512, False, 0.25]]               # 4
+  - [-1, 1, Conv, [512, 3, 2]]                      # 5  P4/16
+  - [-1, 2, C3k2, [512, True]]                      # 6
+  - [-1, 1, Conv, [1024, 3, 2]]                     # 7  P5/32
+  - [-1, 2, C3k2, [1024, True]]                     # 8
+  - [-1, 1, SPPF, [1024, 5, 3, True]]               # 9
+  - [-1, 2, C2PSA, [1024]]                          # 10
 
 head:
-  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]   # 11
-  - [[-1, 6], 1, Concat, [1]]                    # 12
-  - [-1, 2, C3k2, [512, True]]                   # 13
-  # [c1, num_classes, parts_per_class, proto_dim, reduction, temperature]
-  - [-1, 1, DAPR_only_v3, [512, 2, 4, 48, 4, 0.50]]  # 14
-  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]   # 15
-  - [[-1, 4], 1, Concat, [1]]                    # 16
-  - [-1, 2, C3k2, [256, True]]                   # 17
-  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]   # 18
-  - [[-1, 2], 1, Concat, [1]]                    # 19
-  - [-1, 2, C3k2, [128, True]]                   # 20 (P2)
-  - [-1, 1, Conv, [128, 3, 2]]                   # 21
-  - [[-1, 17], 1, Concat, [1]]                   # 22
-  - [-1, 2, C3k2, [256, True]]                   # 23 (P3 out)
-  - [-1, 1, Conv, [256, 3, 2]]                   # 24
-  - [[-1, 14], 1, Concat, [1]]                   # 25
-  - [-1, 2, C3k2, [512, True]]                   # 26 (P4 out)
-  - [[20, 23, 26], 1, Detect, [nc]]              # 27
+  # Top-down FPN path (P5 -> P4)
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]      # 11
+  - [[-1, 6], 1, Concat, [1]]                       # 12
+  - [-1, 2, C3k2, [512, True]]                      # 13
+
+  # DAPR module at P4/16
+  # Args: [c1, num_classes, parts_per_class, proto_dim, reduction, temperature]
+  - [-1, 1, DAPR_only_v3, [512, 2, 4, 48, 4, 0.50]] # 14
+
+  # Top-down FPN path (P4 -> P3)
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]      # 15
+  - [[-1, 4], 1, Concat, [1]]                       # 16
+  - [-1, 2, C3k2, [256, True]]                      # 17
+
+  # Top-down FPN path (P3 -> P2)
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]      # 18
+  - [[-1, 2], 1, Concat, [1]]                       # 19
+  - [-1, 2, C3k2, [128, True]]                      # 20  P2 output
+
+  # Bottom-up PANet path (P2 -> P3)
+  - [-1, 1, Conv, [128, 3, 2]]                      # 21
+  - [[-1, 17], 1, Concat, [1]]                      # 22
+  - [-1, 2, C3k2, [256, True]]                      # 23  P3 output
+
+  # Bottom-up PANet path (P3 -> P4)
+  - [-1, 1, Conv, [256, 3, 2]]                      # 24
+  - [[-1, 14], 1, Concat, [1]]                      # 25
+  - [-1, 2, C3k2, [512, True]]                      # 26  P4 output
+
+  # 3-head detection (P2, P3, P4)
+  - [[20, 23, 26], 1, Detect, [nc]]                 # 27
