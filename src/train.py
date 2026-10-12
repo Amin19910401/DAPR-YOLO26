@@ -61,7 +61,7 @@ DATASET_BASE = r"D:/Doustali/Dataset"
 ARCHITECTURES = [
     {
         'name': 'DAPR-YOLO26s-3head',
-        'yaml': os.path.join(DATASET_BASE, 'dapr_yolo26s_3head.yaml'),
+       'yaml': r"D:/DAPR-YOLO26/configs/dapr_yolo26s_3head.yaml",
         'project_name': 'DAPR-YOLO26s-3head',
         'root_dir': 'D:/eagle',
         'color': '#85c1e9',
