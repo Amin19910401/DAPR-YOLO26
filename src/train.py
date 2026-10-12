@@ -36,7 +36,7 @@ from scipy import stats
 # =================================================================================
 
 RANDOM_SEED = 42
-NEW_SEEDS = [RANDOM_SEED]
+NEW_SEEDS = [7, 42, 123]
 
 SELECTED_CLASSES = [0, 1]
 SELECTED_CLASS_NAMES = {0: "car", 1: "truck"}
