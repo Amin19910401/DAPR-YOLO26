@@ -25,6 +25,6 @@ DAPR is a lightweight feature-refinement module integrated into YOLO26 for effic
 ## Installation
 
 ```bash
-git clone https://github.com/<Amin19910401>/DAPR-YOLO26.git
+git clone https://github.com/Amin19910401/DAPR-YOLO26.git
 cd DAPR-YOLO26
 pip install -r requirements.txt
