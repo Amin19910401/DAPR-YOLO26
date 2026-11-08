@@ -1,0 +1,8 @@
+model,seed_7_last,seed_7_best,seed_42_last,seed_42_best,seed_123_last,seed_123_best
+YOLO26s,78,63,79,64,82,67
+YOLO26s-P2,82,67,77,62,70,55
+YOLO26s-P2-3Head,62,47,70,55,76,61
+DAPR-YOLO26 (4-head),70,55,83,68,76,61
+DAPR-YOLO26 (3-head),74,62,71,64,75,60
+YOLO11s,100,94,98,83,100,87
+YOLO12s,100,86,98,83,100,88
