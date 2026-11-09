@@ -1,0 +1,643 @@
+{
+  "dataset_root": "D:\\Doustali\\Dataset",
+  "split_dirs": {
+    "train": "D:\\Doustali\\Dataset\\images\\train",
+    "val": "D:\\Doustali\\Dataset\\images\\val",
+    "test": "D:\\Doustali\\Dataset\\images\\test_original"
+  },
+  "counts": {
+    "train": {
+      "n_files": 23001,
+      "n_unique_frames": 447,
+      "n_unique_campaigns": 66
+    },
+    "val": {
+      "n_files": 7682,
+      "n_unique_frames": 153,
+      "n_unique_campaigns": 44
+    },
+    "test": {
+      "n_files": 2551,
+      "n_unique_frames": 100,
+      "n_unique_campaigns": 42
+    }
+  },
+  "frame_level_overlap": [],
+  "campaign_level_overlap": [
+    {
+      "campaign": "2007-06-17-Muenchen-HYMAP",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 6,
+        "val": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2007-06-23-Camargue-mitte",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 6,
+        "val": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2008-11-27-Muenchen-Verkehr",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 3,
+        "val": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2008-11-28-Muenchen-Verkehr",
+      "splits": [
+        "train",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 6,
+        "test": 2
+      }
+    },
+    {
+      "campaign": "2010-08-18-DLR-befliegung_18_8_10",
+      "splits": [
+        "train",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2011-07-07-Tollwood",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 9,
+        "val": 3,
+        "test": 2
+      }
+    },
+    {
+      "campaign": "2012-05-19-Champions-League",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 21,
+        "val": 6,
+        "test": 5
+      }
+    },
+    {
+      "campaign": "2013-06-05-Hochwasser_dresden-mitte",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 18,
+        "val": 6,
+        "test": 4
+      }
+    },
+    {
+      "campaign": "2013-06-28-Stuttgart-Feuerwehr",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 12,
+        "val": 3,
+        "test": 2
+      }
+    },
+    {
+      "campaign": "2013-08-02-Frankfurt-mitte",
+      "splits": [
+        "train",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 6,
+        "test": 2
+      }
+    },
+    {
+      "campaign": "2014-07-25-Chicago",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 12,
+        "val": 6,
+        "test": 3
+      }
+    },
+    {
+      "campaign": "2015-03-20-Karlsruhe-L",
+      "splits": [
+        "train",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2015-03-20-Karlsruhe-N",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 9,
+        "val": 6,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2015-03-20-Karlsruhe-R",
+      "splits": [
+        "train",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2015-03-25-Elmau-mitte",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 12,
+        "val": 3,
+        "test": 2
+      }
+    },
+    {
+      "campaign": "2015-04-09-OP-mitte",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 9,
+        "val": 3,
+        "test": 3
+      }
+    },
+    {
+      "campaign": "2015-11-03-A99-Schweben",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 12,
+        "val": 6,
+        "test": 2
+      }
+    },
+    {
+      "campaign": "2015-11-04-Magdeburg-L",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 3,
+        "val": 3,
+        "test": 3
+      }
+    },
+    {
+      "campaign": "2015-11-04-Magdeburg-R",
+      "splits": [
+        "train",
+        "val"
+      ],
+      "frame_counts": {
+        "train": 12,
+        "val": 3
+      }
+    },
+    {
+      "campaign": "2016-02-PHAROS_SOLOSNA",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 6,
+        "val": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2016-04-15-Messestadt-cam",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 6,
+        "val": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2016-08-02-wolfsburg-links",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 18,
+        "val": 3,
+        "test": 4
+      }
+    },
+    {
+      "campaign": "2016-08-02-wolfsburg-rechts",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 15,
+        "val": 6,
+        "test": 4
+      }
+    },
+    {
+      "campaign": "2016-08-04-wacken-Satz3",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 15,
+        "val": 3,
+        "test": 3
+      }
+    },
+    {
+      "campaign": "2016-11-15-A8-A96",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 12,
+        "val": 6,
+        "test": 3
+      }
+    },
+    {
+      "campaign": "2017-03-31-Fahrzeugtracking_Wolfratshausen",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 3,
+        "val": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2017-04-20-Braunschweig-Frankfurt",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 42,
+        "val": 15,
+        "test": 10
+      }
+    },
+    {
+      "campaign": "2017-07-03-Braunschweig-set1",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 12,
+        "val": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2017-07-03-Braunschweig-set2",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 6,
+        "val": 3,
+        "test": 3
+      }
+    },
+    {
+      "campaign": "2017-07-04-Munchen-Zentrum",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 63,
+        "val": 15,
+        "test": 12
+      }
+    },
+    {
+      "campaign": "2017-07-18-Benchmark-Flug",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 3,
+        "val": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2017-07-19-Benchmark-Flug_1",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 15,
+        "val": 3,
+        "test": 4
+      }
+    },
+    {
+      "campaign": "2018-04-28-HySpex-Kaufbeuren",
+      "splits": [
+        "train",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2018-05-07-HySpex-Augsburg",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 3,
+        "val": 3,
+        "test": 1
+      }
+    },
+    {
+      "campaign": "2018-06-04-HySpex-OP",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 9,
+        "val": 3,
+        "test": 3
+      }
+    },
+    {
+      "campaign": "2018-10-26-Freiham-A96",
+      "splits": [
+        "train",
+        "val",
+        "test"
+      ],
+      "frame_counts": {
+        "train": 15,
+        "val": 3,
+        "test": 3
+      }
+    }
+  ],
+  "campaigns_per_split": {
+    "train": {
+      "2007-06-17-Muenchen-HYMAP": 6,
+      "2007-06-23-Camargue-mitte": 6,
+      "2008-11-27-Muenchen-Verkehr": 3,
+      "2008-11-28-Muenchen-Verkehr": 6,
+      "2010-08-18-DLR-befliegung_18_8_10": 3,
+      "2010-10-11-Ungarn-mitte": 3,
+      "2011-07-07-Tollwood": 9,
+      "2012-05-19-Champions-League": 21,
+      "2012-10-25-LuKi-mitte": 3,
+      "2013-06-05-Hochwasser_dresden-mitte": 18,
+      "2013-06-07-Crowd-rar2013_gsd_090_4K0G0335_horizontal": 1,
+      "2013-06-07-Crowd-rar2013_gsd_090_4K0G0335": 1,
+      "2013-06-07-Crowd-rar2013_gsd_090_4K0G0335_vertical": 1,
+      "2013-06-28-Stuttgart-Feuerwehr": 12,
+      "2013-08-02-Frankfurt-mitte": 6,
+      "2014-07-25-Chicago": 12,
+      "2015-03-20-Karlsruhe-L": 3,
+      "2015-03-20-Karlsruhe-N": 9,
+      "2015-03-20-Karlsruhe-R": 3,
+      "2015-03-25-Elmau-mitte": 12,
+      "2015-04-09-OP-mitte": 9,
+      "2015-11-03-A99-Schweben": 12,
+      "2015-11-04-Magdeburg-L": 3,
+      "2015-11-04-Magdeburg-R": 12,
+      "2016-02-PHAROS_SOLOSNA": 6,
+      "2016-04-15-Messestadt-cam": 6,
+      "2016-08-02-wolfsburg-links": 18,
+      "2016-08-02-wolfsburg-rechts": 15,
+      "2016-08-04-wacken-Satz3": 15,
+      "2016-11-15-A8-A96": 12,
+      "2017-03-29-A9": 3,
+      "2017-03-31-Fahrzeugtracking_Wolfratshausen": 3,
+      "2017-04-20-Braunschweig-Frankfurt": 42,
+      "2017-07-03-Braunschweig-set1": 12,
+      "2017-07-03-Braunschweig-set2": 6,
+      "2017-07-04-Crowd-mun2017_gsd_130_N0099_horizontal": 1,
+      "2017-07-04-Crowd-mun2017_gsd_130_N0099": 1,
+      "2017-07-04-Crowd-mun2017_gsd_130_N0099_vertical": 1,
+      "2017-07-04-Munchen-Zentrum": 63,
+      "2017-07-18-Benchmark-Flug": 3,
+      "2017-07-19-Benchmark-Flug_1": 15,
+      "2018-04-28-HySpex-Kaufbeuren": 3,
+      "2018-05-07-HySpex-Augsburg": 3,
+      "2018-06-04-HySpex-OP": 9,
+      "2018-09-27-Baustelle_L1277_horizontal": 1,
+      "2018-09-27-Baustelle_L1277": 1,
+      "2018-09-27-Baustelle_L1277_vertical": 1,
+      "2018-09-27-Baustelle_L1473_horizontal": 1,
+      "2018-09-27-Baustelle_L1473": 1,
+      "2018-09-27-Baustelle_L1473_vertical": 1,
+      "2018-09-27-Baustelle_L3272_horizontal": 1,
+      "2018-09-27-Baustelle_L3272": 1,
+      "2018-09-27-Baustelle_L3272_vertical": 1,
+      "2018-09-27-Baustelle_L3475_horizontal": 1,
+      "2018-09-27-Baustelle_L3475": 1,
+      "2018-09-27-Baustelle_L3475_vertical": 1,
+      "2018-09-27-Baustelle_L3552_horizontal": 1,
+      "2018-09-27-Baustelle_L3552": 1,
+      "2018-09-27-Baustelle_L3552_vertical": 1,
+      "2018-10-04-Ampelkreuzungen_L0001_horizontal": 1,
+      "2018-10-04-Ampelkreuzungen_L0001": 1,
+      "2018-10-04-Ampelkreuzungen_L0001_vertical": 1,
+      "2018-10-04-Ampelkreuzungen_L0033_horizontal": 1,
+      "2018-10-04-Ampelkreuzungen_L0033": 1,
+      "2018-10-04-Ampelkreuzungen_L0033_vertical": 1,
+      "2018-10-26-Freiham-A96": 15
+    },
+    "val": {
+      "2006-05-03-Allianz-links": 3,
+      "2007-06-17-Muenchen-HYMAP": 3,
+      "2007-06-23-Camargue-mitte": 3,
+      "2008-11-27-Muenchen-Verkehr": 3,
+      "2011-07-07-Tollwood": 3,
+      "2011-10-03-Crowd-bonn2011_gsd_200_N0100_horizontal": 1,
+      "2011-10-03-Crowd-bonn2011_gsd_200_N0100": 1,
+      "2011-10-03-Crowd-bonn2011_gsd_200_N0100_vertical": 1,
+      "2012-05-19-Champions-League": 6,
+      "2013-06-05-Hochwasser_dresden-mitte": 6,
+      "2013-06-28-Stuttgart-Feuerwehr": 3,
+      "2013-08-02-Frankfurt-rechts": 3,
+      "2014-07-25-Chicago": 6,
+      "2015-03-20-Karlsruhe-N": 6,
+      "2015-03-25-Elmau-mitte": 3,
+      "2015-04-09-OP-mitte": 3,
+      "2015-11-03-A99-Schweben": 6,
+      "2015-11-04-Magdeburg-L": 3,
+      "2015-11-04-Magdeburg-R": 3,
+      "2016-02-PHAROS_SOLOSNA": 3,
+      "2016-04-15-Messestadt-cam": 3,
+      "2016-08-02-wolfsburg-links": 3,
+      "2016-08-02-wolfsburg-rechts": 6,
+      "2016-08-04-wacken-Satz3": 3,
+      "2016-11-15-A8-A96": 6,
+      "2017-03-31-Fahrzeugtracking_Wolfratshausen": 3,
+      "2017-04-20-Braunschweig-Frankfurt": 15,
+      "2017-07-03-Braunschweig-set1": 3,
+      "2017-07-03-Braunschweig-set2": 3,
+      "2017-07-04-Munchen-Zentrum": 15,
+      "2017-07-18-Benchmark-Flug": 3,
+      "2017-07-19-Benchmark-Flug_1": 3,
+      "2018-05-07-HySpex-Augsburg": 3,
+      "2018-06-04-HySpex-OP": 3,
+      "2018-09-27-Baustelle_L0661_horizontal": 1,
+      "2018-09-27-Baustelle_L0661": 1,
+      "2018-09-27-Baustelle_L0661_vertical": 1,
+      "2018-09-27-Baustelle_L3406_horizontal": 1,
+      "2018-09-27-Baustelle_L3406": 1,
+      "2018-09-27-Baustelle_L3406_vertical": 1,
+      "2018-10-04-Ampelkreuzungen_L0109_horizontal": 1,
+      "2018-10-04-Ampelkreuzungen_L0109": 1,
+      "2018-10-04-Ampelkreuzungen_L0109_vertical": 1,
+      "2018-10-26-Freiham-A96": 3
+    },
+    "test": {
+      "2007-06-17-Muenchen-HYMAP": 1,
+      "2007-06-23-Camargue-mitte": 1,
+      "2008-11-27-Muenchen-Verkehr": 1,
+      "2008-11-28-Muenchen-Verkehr": 2,
+      "2010-08-18-DLR-befliegung_18_8_10": 1,
+      "2010-10-11-Ungarn-rechts": 1,
+      "2011-07-07-Tollwood": 2,
+      "2012-05-19-Champions-League": 5,
+      "2013-06-05-Hochwasser_dresden-mitte": 4,
+      "2013-06-28-Stuttgart-Feuerwehr": 2,
+      "2013-08-02-Frankfurt-mitte": 2,
+      "2014-07-25-Chicago": 3,
+      "2015-03-20-Karlsruhe-L": 1,
+      "2015-03-20-Karlsruhe-N": 1,
+      "2015-03-20-Karlsruhe-R": 1,
+      "2015-03-25-Elmau-mitte": 2,
+      "2015-04-09-OP-mitte": 3,
+      "2015-04-22-Kitzingen-mitte": 1,
+      "2015-11-03-A99-Schweben": 2,
+      "2015-11-04-Magdeburg-L": 3,
+      "2016-02-PHAROS_SOLOSNA": 1,
+      "2016-04-15-Messestadt-cam": 1,
+      "2016-04-16-Crowd-bau2016_gsd_120_R1413": 1,
+      "2016-08-02-wolfsburg-links": 4,
+      "2016-08-02-wolfsburg-rechts": 4,
+      "2016-08-04-wacken-Satz3": 3,
+      "2016-11-15-A8-A96": 3,
+      "2017-03-31-Fahrzeugtracking_Wolfratshausen": 1,
+      "2017-04-20-Braunschweig-Frankfurt": 10,
+      "2017-07-03-Braunschweig-set1": 1,
+      "2017-07-03-Braunschweig-set2": 3,
+      "2017-07-04-Munchen-Zentrum": 12,
+      "2017-07-18-Benchmark-Flug": 1,
+      "2017-07-19-Benchmark-Flug_1": 4,
+      "2018-04-28-HySpex-Kaufbeuren": 1,
+      "2018-05-07-HySpex-Augsburg": 1,
+      "2018-06-04-HySpex-OP": 3,
+      "2018-09-27-Baustelle_L0665": 1,
+      "2018-09-27-Baustelle_L2461": 1,
+      "2018-09-27-Baustelle_L3001": 1,
+      "2018-10-04-Ampelkreuzungen_L0017": 1,
+      "2018-10-26-Freiham-A96": 3
+    }
+  },
+  "note": "Frame ID = crop filename with transformation suffix (_original_XXX_YYY, _flip_XXX_YYY, etc.) and crop coordinates removed. Campaign ID = YYYY-MM-DD + first two tokens after date. Audit uses filenames only."
+}
